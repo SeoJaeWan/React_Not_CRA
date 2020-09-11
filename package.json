@@ -1,0 +1,38 @@
+{
+  "name": "react_not_cra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "build": "cross-env NODE_ENV=production webpack --progress "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeoJaeWan/React_Not_CRA.git"
+  },
+  "author": "SeoJaeWan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeoJaeWan/React_Not_CRA/issues"
+  },
+  "homepage": "https://github.com/SeoJaeWan/React_Not_CRA#readme",
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
+    "@babel/preset-react": "7.10.4",
+    "babel-loader": "8.1.0",
+    "babel-plugin-root-import": "6.5.0",
+    "babel-plugin-styled-components": "1.11.1",
+    "cross-env": "7.0.2",
+    "html-webpack-plugin": "4.4.1",
+    "styled-components": "5.2.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  }
+}

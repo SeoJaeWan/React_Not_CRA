@@ -1,0 +1,26 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      { "targets": { "browsers": ["last 2 versions", ">= 5% in KR"] } }
+      // target을 지정하여 브라우저 상위 버전 두개( Ex. IE 11, 10)와 한국(KR)에서 5% 이상의
+      // 점유율을 가지고 있는 브라우저에 대응하여 컴파일되도록 설정
+    ],
+    "@babel/react"
+    // React도 컴파일될 수 있도록 설정
+  ],
+  "plugins": [
+    [
+      "babel-plugin-root-import",
+      {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src"
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": ["babel-plugin-styled-components"]
+    }
+  }
+}
