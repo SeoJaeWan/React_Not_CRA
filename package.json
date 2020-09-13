@@ -29,8 +29,10 @@
     "babel-plugin-root-import": "6.5.0",
     "babel-plugin-styled-components": "1.11.1",
     "cross-env": "7.0.2",
+    "file-loader": "6.1.0",
     "html-webpack-plugin": "4.4.1",
     "styled-components": "5.2.0",
+    "url-loader": "4.1.0",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0"

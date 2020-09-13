@@ -24,6 +24,32 @@ module.exports = {
         use: ["babel-loader"],
         exclude: /node_modules/,
       },
+      {
+        test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 10000,
+              fallback: "file-loader",
+              name: "images/[name].[ext]",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 10000,
+              fallback: "file-loader",
+              name: "fonts/[name].[ext]",
+            },
+          },
+        ],
+      },
     ],
   },
   // React 파일인 jsx와 js는 babel(바벨)을 이용해 빌드한다.
@@ -40,4 +66,10 @@ module.exports = {
   ],
   // ./src/index.html 파일을 dist 경로에 index.html 파일로 생성한다.
   // 파일을 생성할 때, Webpack이 만든 번들 파일(/js/app.js)를 HTML에 추가하여 생성한다.
+
+  devServer: {
+    contentBase: "./dist",
+    port: 3000,
+    historyApiFallback: true,
+  },
 };
